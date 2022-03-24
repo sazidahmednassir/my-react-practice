@@ -3,7 +3,7 @@ import { BsFillCartFill } from "react-icons/bs";
 import "./Card.css";
 
 const Card = (props) => {
-    const { name, img, bullet, action, price, id } = props.gun;
+    const { name, img, bullet, action, price} = props.gun;
     return (
         <div className='card'>
         <div className='image-container'>
