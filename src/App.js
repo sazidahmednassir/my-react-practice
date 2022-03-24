@@ -45,9 +45,11 @@ function App() {
   return (
     <div className="App">
        <Navbar></Navbar>
-       {guns.map((gun) => (
-          <Card gun={gun} key={gun.id}  />
+       <div className='card-container'>
+        {guns.map((gun) => (
+          <Card gun={gun} key={gun.id} handleAddToCart={handleAddToCart} />
         ))}
+        </div>
     </div>
   );
 }
