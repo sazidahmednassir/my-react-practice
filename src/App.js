@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
+import { CgCloseR } from "react-icons/cg";
+import Modal from 'react-modal';
 import './App.css';
 import Card from './Component/Card/Card';
 import Navbar from './Component/Navbar/Navbar';
+
+Modal.setAppElement("#root");
 
 function App() {
   const [guns, setGuns] = useState([]);
@@ -50,7 +54,7 @@ function App() {
           <Card gun={gun} key={gun.id} handleAddToCart={handleAddToCart} />
         ))}
       </div>
-      {/* <Modal isOpen={modal} onRequestClose={closeModal} style={customStyles}>
+      <Modal isOpen={modal} onRequestClose={closeModal} style={customStyles}>
         <button className='modal-close-button' onClick={closeModal}>
           <CgCloseR size={25} />
         </button>
@@ -62,7 +66,7 @@ function App() {
         {cart.map((item) => (
           <h1>Name: {item.name}</h1>
         ))}
-      </Modal> */}
+      </Modal>
     </div>
   );
 }
